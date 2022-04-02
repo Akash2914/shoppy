@@ -65,7 +65,7 @@ const Register = () => {
       <h1>Register</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='email'>
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label style={{ color: 'black' }}>Email Address</Form.Label>
           <Form.Control
             type='email'
             placeholder='Enter your Email'
@@ -103,8 +103,8 @@ const Register = () => {
         )}
       </Form>
       <Row className='py-3'>
-        <Col>
-          Alreary Have an Account? <Link to='/login'>Login</Link>
+        <Col style={{ color: 'black' }}>
+          Already Have an Account? <Link to='/login'>Login</Link>
         </Col>
       </Row>
     </FormContainer>

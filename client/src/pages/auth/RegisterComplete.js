@@ -147,7 +147,7 @@ const RegisterComplete = ({ history }) => {
       <Form>
         <Form.Group controlId='email'>
           <Form.Label>
-            <strong>Email Address</strong>{' '}
+            <strong style={{ color: 'black' }}>Email Address</strong>{' '}
             {!window.localStorage.getItem('mercuryNewRegister')
               ? '(Enter the same mail)'
               : ''}
@@ -161,8 +161,9 @@ const RegisterComplete = ({ history }) => {
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
+        <br />
         <Form.Group controlId='password'>
-          <Form.Label>Password</Form.Label>
+          <Form.Label style={{ color: 'black' }}>Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Enter your password'
@@ -173,8 +174,9 @@ const RegisterComplete = ({ history }) => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
+        <br />
         <Form.Group controlId='confirmpassword'>
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label style={{ color: 'black' }}>Confirm Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Re-Enter your password'

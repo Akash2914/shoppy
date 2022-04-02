@@ -57,6 +57,19 @@ const ProductCard = ({ product }) => {
           )}
         </Card.Title>
         <Link to={`/product/${product.slug}`}>
+          {/* <Card.Img
+            style={{
+              height: '300px',
+              width: '350px',
+              objectFit: 'contain',
+            }}
+            src={
+              images && images.length
+                ? images[0].url
+                : `https://res.cloudinary.com/duigjlhf8/image/upload/v1642846803/No_image_kztd4b.png`
+            }
+            variant='top'
+          /> */}
           <Card.Img
             src={
               images && images.length

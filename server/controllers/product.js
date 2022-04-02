@@ -19,12 +19,16 @@ exports.createProduct = async (req, res) => {
 }
 
 exports.readProducts = async (req, res) => {
-  let products = await Product.find({})
-    .populate('category')
-    .populate('subCategory')
-    .sort([['createdAt', 'desc']])
-    .exec()
-  res.json(products)
+  try {
+    let products = await Product.find({})
+      .populate('category')
+      .populate('subCategory')
+      .sort([['createdAt', 'desc']])
+      .exec()
+    res.json(products)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 exports.removeProduct = async (req, res) => {
@@ -92,7 +96,7 @@ exports.list = async (req, res) => {
       .sort([[sort, order]])
       .limit(perPage)
       .exec()
-    return res.status(200).json(products)
+    res.status(200).json(products)
   } catch (error) {
     res.status(400).json({
       err: error.message,
