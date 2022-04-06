@@ -6,31 +6,39 @@ const ShowOrderInfo = ({ order, showStatus = true }) => {
     <div>
       <p>
         <span>
-          <b>Order Id </b>: {order._id}
+          <p style={{ color: 'black' }}>
+            <b>Order Id </b>: {order._id}
+          </p>
         </span>{' '}
-        {' / '}{' '}
         {user && user.role === 'admin' && (
           <>
             <span>
-              <b>Ordered By</b> : {order.orderBy.email}
+              <p style={{ color: 'black' }}>
+                {' '}
+                <b>Ordered By</b> : {order.orderBy.email}
+              </p>
             </span>
-            {' / '}{' '}
           </>
         )}
         <span>
-          <b>Total Amount</b> : ₹{order.totalOrderAmount}
+          <p style={{ color: 'black' }}>
+            {' '}
+            <b>Total Amount</b> : ₹{order.totalOrderAmount}{' '}
+          </p>
         </span>
-        {' / '}
         <span>
-          <b>Ordered On</b> : {new Date(order.createdAt).toLocaleString()}
+          <p style={{ color: 'black' }}>
+            <b>Ordered On</b> : {new Date(order.createdAt).toLocaleString()}{' '}
+          </p>
         </span>
-        {' / '}
-        <br />
         {showStatus && (
           <span className='badge bg-primary'>
             <b>Status</b> : {order.orderStatus}
           </span>
-        )}
+        )}{' '}
+        <p className='mt-3' style={{ color: 'black' }}>
+          ORDER DETAILS{' '}
+        </p>
       </p>
     </div>
   )

@@ -17,7 +17,7 @@ const initialState = {
   street: '',
   city: '',
   landmark: '',
-  pincode: '',
+  pincode: '453441',
   flatNumber: '',
 }
 const Checkout = () => {
