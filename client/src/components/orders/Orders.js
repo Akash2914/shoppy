@@ -14,7 +14,7 @@ const Orders = ({ orders, handleStatusChange }) => {
         </tr>
       </thead>
       <tbody>
-        {order.products.map((p, i) => (
+        {order?.products?.map((p, i) => (
           <tr key={i}>
             <td>
               <b>{p.product.title}</b>
@@ -45,39 +45,39 @@ const Orders = ({ orders, handleStatusChange }) => {
                     <tbody className='tbody-light'>
                       <tr>
                         <th scope='col'>Order ID</th>
-                        <th scope='col'>{order._id}</th>
+                        <th scope='col'>{order?._id}</th>
                       </tr>
                       <tr>
                         <th scope='col'>email</th>
-                        <th scope='col'>{order.orderBy.email}</th>
+                        <th scope='col'>{order?.orderBy?.email}</th>
                       </tr>
 
                       <tr>
                         <th scope='col'>Customer Id</th>
-                        <th scope='col'>{order.orderBy._id}</th>
+                        <th scope='col'>{order?.orderBy?._id}</th>
                       </tr>
                       <tr>
                         <th scope='col'>Name</th>
-                        <th scope='col'>{order.address[0].name}</th>
+                        <th scope='col'>{order?.address[0]?.name}</th>
                       </tr>
                       <tr>
                         <th scope='col'>Phone</th>
-                        <th scope='col'>{order.address[0].number}</th>
+                        <th scope='col'>{order?.address[0]?.number}</th>
                       </tr>
                       <tr>
                         <th scope='col'>city</th>
-                        <th scope='col'>{order.address[0].city}</th>
+                        <th scope='col'>{order?.address[0]?.city}</th>
                       </tr>
                       <tr>
                         <th scope='col'>Pincode</th>
-                        <th scope='col'>{order.address[0].pincode}</th>
+                        <th scope='col'>{order?.address[0]?.pincode}</th>
                       </tr>
 
                       <tr>
                         <th scope='col'>Landmark</th>
                         <th scope='col'>
-                          {order.address[0].landmark
-                            ? order.address[0].landmark
+                          {order?.address[0]?.landmark
+                            ? order?.address[0]?.landmark
                             : 'Not Provided'}
                         </th>
                       </tr>

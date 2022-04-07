@@ -60,20 +60,25 @@ const AdminContactus = () => {
           <div>
             <p>
               <span>
-                <b>Form Id </b>: {contact._id}
+                <b style={{ color: 'black' }}>
+                  Form Id : {contact._id} {' / '}{' '}
+                </b>
               </span>{' '}
-              {' / '}{' '}
               <span>
-                <b>Submitted By</b> : {contact.name}
+                <b style={{ color: 'black' }}>
+                  Submitted By: {contact.name}
+                  {' / '}
+                </b>
               </span>
-              {' / '}
               <span>
-                <b>Phone</b> : {contact.phone}
+                <b style={{ color: 'black' }}>
+                  Phone: {contact.phone} {' / '}
+                </b>
               </span>
-              {' / '}
               <span>
                 <Tooltip title={'delete'} placement='bottom'>
                   <span
+                    style={{ color: 'black' }}
                     className='pointer'
                     onClick={() => handleDelete(contact._id)}
                   >
