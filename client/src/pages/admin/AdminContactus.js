@@ -31,7 +31,7 @@ const AdminContactus = () => {
           loadAllContact()
         })
         .catch((err) => {
-          console.log(err)
+          toast.error('Error Removing Contact')
         })
     }
   }

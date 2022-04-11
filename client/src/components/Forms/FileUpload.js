@@ -35,7 +35,6 @@ const FileUpload = ({ values, setValues, setImageLoader }) => {
                 }
               )
               .then((res) => {
-                console.log(res.data)
                 setImageLoader(false)
                 allUploadedFiles.push(res.data)
                 setValues({ ...values, images: allUploadedFiles })

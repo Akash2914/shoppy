@@ -14,16 +14,17 @@ const Orders = ({ orders, handleStatusChange }) => {
         </tr>
       </thead>
       <tbody>
-        {order?.products?.map((p, i) => (
-          <tr key={i}>
-            <td>
-              <b>{p.product.title}</b>
-            </td>
-            <td>{p.product.price}</td>
-            <td>{p.count}</td>
-            <td>{p.product.brand}</td>
-          </tr>
-        ))}
+        {order &&
+          order?.products?.map((p, i) => (
+            <tr key={i}>
+              <td>
+                <b>{p?.product?.title}</b>
+              </td>
+              <td>{p?.product?.price}</td>
+              <td>{p?.count}</td>
+              <td>{p?.product?.brand}</td>
+            </tr>
+          ))}
       </tbody>
     </table>
   )

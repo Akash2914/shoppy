@@ -15,7 +15,6 @@ const AdminDashboard = () => {
   const loadAllOrders = () => {
     getOrders(user.token).then((res) => {
       setOrders(res.data)
-      console.log(JSON.stringify(res.data, null, 4))
     })
   }
 

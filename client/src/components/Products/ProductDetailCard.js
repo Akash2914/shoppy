@@ -63,7 +63,7 @@ const ProductDetailCard = ({ product, onStarClick, star }) => {
   const handleAddtoWishlist = (e) => {
     e.preventDefault()
     addToWishList(product._id, user.token).then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       toast.success('Added To Wishlist')
       navigate('/user/wishlist')
     })

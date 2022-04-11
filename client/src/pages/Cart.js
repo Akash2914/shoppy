@@ -24,7 +24,7 @@ const Cart = () => {
     } else {
       userCart(cart, user.token)
         .then((res) => {
-          console.log('CART DB response', res)
+          // console.log('CART DB response', res)
           if (res.data.ok) {
             navigate('/checkout')
           }

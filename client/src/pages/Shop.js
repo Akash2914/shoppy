@@ -14,6 +14,7 @@ import { Badge, Button, Row, Tooltip } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import './shop.css'
 import { useLocation } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const { SubMenu, ItemGroup } = Menu
 
@@ -76,7 +77,7 @@ const Shop = () => {
         setLoading(false)
 
         setLoading(false)
-        console.log(err)
+        toast.error('Error loading products')
       })
   }
 
@@ -96,7 +97,7 @@ const Shop = () => {
       })
       .catch((err) => {
         setLoading(false)
-        console.log(err)
+        toast.error('Error loading products')
       })
   }
   useEffect(() => {
