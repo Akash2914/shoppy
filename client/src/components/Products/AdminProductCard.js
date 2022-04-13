@@ -24,9 +24,9 @@ const AdminProductCard = ({ product, handleRemove, loadAllProducts }) => {
           />
         </Link>
         <Card.Body>
-          <Link to={`/admin/product/${product.slug}`}>
+          <Link to={`/admin/product/${product?.slug}`}>
             <Card.Title as='div' style={{ color: 'black' }}>
-              <strong>{product.title}</strong>
+              <strong>{product?.title}</strong>
             </Card.Title>
           </Link>
           <Card.Text style={{ color: 'black' }} as='div'>
@@ -43,14 +43,12 @@ const AdminProductCard = ({ product, handleRemove, loadAllProducts }) => {
           <Card.Text as='h5' style={{ color: 'black' }}>
             {' '}
             ₹{price} &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => handleRemove(product.slug)}>Delete</Button>
+            <Button onClick={() => handleRemove(product?.slug)}>Delete</Button>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <ProductCountUpdateModal
               product={product}
               loadAllProducts={loadAllProducts}
-            >
-              <h4>ninja</h4>
-            </ProductCountUpdateModal>
+            ></ProductCountUpdateModal>
           </Card.Text>
         </Card.Body>
       </Card>

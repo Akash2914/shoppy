@@ -52,36 +52,36 @@ const ProductCountUpdateModal = ({ product, loadAllProducts }) => {
           <tbody className='tbody-ligth'>
             <tr>
               <th scope='col'>Product Title</th>
-              <td scope='col'>{product.title}</td>
+              <td scope='col'>{product?.title}</td>
             </tr>
             <tr>
               <th scope='col'>Description</th>
-              <td scope='col'>{product.description}</td>
+              <td scope='col'>{product?.description}</td>
             </tr>
             <tr>
               <th scope='col'>Price</th>
-              <td scope='col'>{product.price}</td>
+              <td scope='col'>{product?.price}</td>
             </tr>
             <tr>
               <th scope='col'>Product Count</th>
-              <td scope='col'>{product.quantity} Left</td>
+              <td scope='col'>{product?.quantity} Left</td>
             </tr>
             <tr>
               <th scope='col'>Product Sold</th>
-              <td scope='col'>{product.sold}</td>
+              <td scope='col'>{product?.sold}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <th scope='col'>Category</th>
-              <td scope='col'>{product.category.name}</td>
+              <td scope='col'>{product?.category?.name}</td>
             </tr>
             {product.subCategory && (
               <tr>
                 <th scope='col'>SubCategory</th>
                 {product.subCategory.map((sub) => (
-                  <td scope='col'>{sub.name}</td>
+                  <td scope='col'>{sub?.name}</td>
                 ))}
               </tr>
-            )}
+            )} */}
             <tr>
               <th scope='col'>Update Count</th>
               <td scope='col'>
