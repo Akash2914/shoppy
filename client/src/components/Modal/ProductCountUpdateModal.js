@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { Modal, Tooltip } from 'antd'
 import { toast } from 'react-toastify'
 import { useSelector } from 'react-redux'
-import { Button } from 'react-bootstrap'
-import { useNavigate, useParams } from 'react-router-dom'
 import { updateProductCount } from '../../api/product'
 const ProductCountUpdateModal = ({ product, loadAllProducts }) => {
   const { user } = useSelector((state) => ({ ...state }))
@@ -70,18 +68,6 @@ const ProductCountUpdateModal = ({ product, loadAllProducts }) => {
               <th scope='col'>Product Sold</th>
               <td scope='col'>{product?.sold}</td>
             </tr>
-            {/* <tr>
-              <th scope='col'>Category</th>
-              <td scope='col'>{product?.category?.name}</td>
-            </tr>
-            {product.subCategory && (
-              <tr>
-                <th scope='col'>SubCategory</th>
-                {product.subCategory.map((sub) => (
-                  <td scope='col'>{sub?.name}</td>
-                ))}
-              </tr>
-            )} */}
             <tr>
               <th scope='col'>Update Count</th>
               <td scope='col'>

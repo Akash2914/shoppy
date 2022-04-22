@@ -99,20 +99,6 @@ const Header = () => {
               </div>
               {screenWidth < 992 ? <br /> : ''}
 
-              {/* </> */}
-
-              {/* <Link
-                to='/shop'
-                style={{
-                  textDecoration: 'none',
-                  marginRight: '10px',
-                  // marginLeft: '10px',
-                  textDecoration: 'none',
-                  color: 'black',
-                }}
-              >
-                <i className='fa fa-shop'></i> Shop
-              </Link> */}
               {screenWidth < 992 ? <br /> : ''}
 
               {!user && (

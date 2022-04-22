@@ -1,10 +1,9 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import './Search.css'
+import { toast } from 'react-toastify'
 const Search = () => {
   let dispatch = useDispatch()
-  const navigate = useNavigate()
   const { search } = useSelector((state) => ({ ...state }))
   const { text } = search
 
@@ -17,17 +16,12 @@ const Search = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    navigate(`/shop?${text}`)
+    toast.success('Results Filtered')
   }
 
   return (
     <div className='searchStyle'>
       <form className='form-inline my-2 my-lg-0' onSubmit={handleSubmit}>
-        {/* <i
-        className='fas fa-search'
-        style={{ cursor: 'pointer' }}
-        onClick={handleSubmit}
-      ></i> */}
         <input
           type='search'
           value={text}
