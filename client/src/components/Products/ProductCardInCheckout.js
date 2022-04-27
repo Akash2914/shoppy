@@ -14,7 +14,7 @@ const ProductCardInCheckout = ({ product }) => {
     //   return toast.error('Invalid Count')
     // }
 
-    setQuantity(e.target.value)
+    setQuantity(Math.round(e.target.value))
 
     let cart = []
 
@@ -88,12 +88,26 @@ const ProductCardInCheckout = ({ product }) => {
         <td>₹{product.price}</td>
         <td>{product.brand}</td>
         <td className='text-center'>
-          <input
+          <select
+          className='form-control'
+            value={quantity}
+            onChange={handleQuantityChange}>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+          </select>
+          {/* <input
             type='number'
             className='form-control'
             value={quantity}
             onChange={handleQuantityChange}
-          />
+          /> */}
         </td>
         <td style={{ color: 'black' }} className='text-center'>
           <i

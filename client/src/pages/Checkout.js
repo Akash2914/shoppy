@@ -134,12 +134,12 @@ const Checkout = () => {
         {products.map((p, index) => (
           <div key={index}>
             <h5>
-              {p.product.title} x {p.count} = {p.product.price * p.count}{' '}
+              {p.product.title} x {p.count} = {(p.product.price * p.count).toFixed(2)}{' '}
             </h5>
           </div>
         ))}
         <hr />
-        <h5>Cart Total : {total}</h5>
+        <h5>Cart Total : {(total).toFixed(2)}</h5>
         <div className='row'>
           <div className='col-md-6'>
             <Button
