@@ -14,7 +14,7 @@ const Cart = () => {
 
   const getTotal = () => {
     return cart.reduce((currentValue, nextValue) => {
-      return (currentValue + nextValue?.count * nextValue?.price)?.toFixed(2)
+      return (currentValue + nextValue?.count * nextValue?.price)
     }, 0)
   }
 
