@@ -16,15 +16,15 @@ import axios from 'axios'
 import Avatar from 'react-avatar'
 
 const initialValues = {
-  title: 'Ninja',
-  description: 'asdsd',
-  price: '123',
+  title: '',
+  description: '',
+  price: '',
   categories: [],
   category: '',
   subCategory: [],
-  quantity: '123',
+  quantity: '',
   images: [],
-  brand: 'asfdsa',
+  brand: '',
 }
 
 const ProductCreate = () => {
@@ -72,8 +72,12 @@ const ProductCreate = () => {
   }
   const submitHandler = (e) => {
     e.preventDefault()
-    setLoading(true)
     values.subCategory = field
+    if(values.price <= 0){
+      return toast.error('PRICE CANNOT BE NEGATIVE or ZERO')
+    }
+    setLoading(true)
+    
     createProduct(values, user.token)
       .then((res) => {
         toast.success(`${res.data.title} is Created`, {

@@ -88,11 +88,12 @@ const ProductCardInCheckout = ({ product }) => {
         <td>₹{product.price}</td>
         <td>{product.brand}</td>
         <td className='text-center'>
-          <select
+          {/* <select
           className='form-control'
             value={quantity}
             onChange={handleQuantityChange}>
-            <option value='1'>1</option>
+              
+             <option value='1'>1</option>
             <option value='2'>2</option>
             <option value='3'>3</option>
             <option value='4'>4</option>
@@ -101,13 +102,15 @@ const ProductCardInCheckout = ({ product }) => {
             <option value='7'>7</option>
             <option value='8'>8</option>
             <option value='9'>9</option>
-          </select>
-          {/* <input
+          </select> */}
+          <input
             type='number'
             className='form-control'
             value={quantity}
+            min='1'
+            max={product?.quantity}
             onChange={handleQuantityChange}
-          /> */}
+          />
         </td>
         <td style={{ color: 'black' }} className='text-center'>
           <i
