@@ -110,6 +110,9 @@ const ProductCreate = () => {
   }
 
   const handleChange = (e) => {
+    if (e.target.name == 'quantity'){
+      e.target.value = Math.ceil(e.target.value)
+    }
     setValues({ ...values, [e.target.name]: e.target.value })
   }
 

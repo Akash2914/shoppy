@@ -69,6 +69,10 @@ const ProductCreateForm = ({
         <Form.Group controlId='quantity'>
           <Form.Label style={{ color: 'black' }}>Product Quantity</Form.Label>
           <Form.Control
+            // type='number'
+            // className='form-control'
+            min='1'
+            step = "1"
             name='quantity'
             type='number'
             required={true}
