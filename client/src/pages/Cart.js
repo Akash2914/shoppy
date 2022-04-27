@@ -14,7 +14,7 @@ const Cart = () => {
 
   const getTotal = () => {
     return cart.reduce((currentValue, nextValue) => {
-      return (currentValue + nextValue.count * nextValue.price).toFixed(2)
+      return (currentValue + nextValue?.count * nextValue?.price)?.toFixed(2)
     }, 0)
   }
 
@@ -75,7 +75,7 @@ const Cart = () => {
             {cart.map((c, i) => (
               <div key={i}>
                 <h5>
-                  {c.title} * {c.count} = ₹{(c.price * c.count).toFixed(2)}
+                  {c.title} * {c.count} = ₹{(c.price * c.count)?.toFixed(2)}
                 </h5>
               </div>
             ))}

@@ -134,7 +134,7 @@ const Checkout = () => {
         {products.map((p, index) => (
           <div key={index}>
             <h5>
-              {p.product.title} x {p.count} = {(p.product.price * p.count).toFixed(2)}{' '}
+              {p?.product?.title} x {p?.count} = {(p?.product?.price * p?.count)?.toFixed(2)}{' '}
             </h5>
           </div>
         ))}
