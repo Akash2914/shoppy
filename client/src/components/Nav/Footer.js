@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { LinkedinOutlined } from '@ant-design/icons'
 
 const Footer = () => {
   return (
@@ -11,7 +12,11 @@ const Footer = () => {
             <Link to='/contactus' style={{ textDecoration: 'none' }}>
               <h5 style={{ color: '#1881f0' }}>Contact Us</h5>
             </Link>
-            <h4>Copyright &copy; Mercury </h4>
+              <p  style={{ color: '#1881f0',cursor:'pointer' }} onClick={()=>{
+                window.open('https://www.linkedin.com/in/sanjheev-r-505377198/','_blank','noopener','noreferrer')
+              }}>
+                <LinkedinOutlined />
+              </p>
           </Col>
         </Row>
       </Container>

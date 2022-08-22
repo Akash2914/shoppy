@@ -6,36 +6,6 @@ import { authen } from './firebase'
 import { useDispatch } from 'react-redux'
 import { currentUser } from './api/auth'
 import { Spinner } from 'react-bootstrap'
-// import {
-//   Register,
-//   Login,
-//   Home,
-//   RegisterComplete,
-//   ForgotPassword,
-//   History,
-//   PasswordChange,
-//   WishList,
-//   AdminDashBoard,
-//   CategoryCreate,
-//   CategoryUpdate,
-//   SubCategoryCreate,
-//   SubCategoryUpdate,
-//   ProductCreate,
-//   Products,
-//   ProductUpdate,
-//   Shop,
-//   ProductDetail,
-//   CategoryHome,
-//   Cart,
-//   Checkout,
-// } from './pages'
-// import { Footer, Header, SideDrawer } from './components'
-// import { authen } from './firebase'
-// import { useDispatch } from 'react-redux'
-// import { currentUser } from './api/auth'
-// import UserRoute from './components/Routes/UserRoute'
-// import AdminRoute from './components/Routes/AdminRoute'
-// import SubHome from './pages/subCategory/SubHome'
 
 //using lazy
 const Login = lazy(() => import('./pages/auth/Login'))

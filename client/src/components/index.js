@@ -1,7 +1,6 @@
 export { default as Header } from './Nav/Header'
 export { default as Footer } from './Nav/Footer'
 export { default as ProductCard } from './Products/ProductCard'
-export { default as Rating } from './Products/Ratings'
 export { default as FormContainer } from './Forms/FormContainer'
 
 //modal
