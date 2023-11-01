@@ -4,9 +4,11 @@
   "description": "Mercury api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix client && npm run build --prefix client"
   },
-  "author": "Sanjheev",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
